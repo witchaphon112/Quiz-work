@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+**ชื่อ-นามสกุล: วิชญ์พล ยืนยง**
+**รหัสนักศึกษา: 653450103-3**
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+โปรเจกต์นี้เป็นแอปตัวอย่างที่พัฒนาด้วย **Expo + React Native (TypeScript)** เพื่อเชื่อมกับ **CIS KKU Classroom API** และมีฟังก์ชันหลักดังนี้:
 
-## Get started
+## ฟังก์ชันหลัก
 
-1. Install dependencies
+จงสร้างเว็บแอพพลิเคชั่นโดยมีฟังก์ชั่นการทำงานต่อไปนี้
 
-   ```bash
-   npm install
-   ```
+1. ฟังก์ชั่นล๊อกอินเข้าสู่ระบบ
+2. ฟังชั่นดูสมาชิกในชั้นปี ตามปีที่เข้าศึกษา
 
-2. Start the app
+curl -X 'GET' \
+ 'https://cis.kku.ac.th/api/classroom/class/2565' \
 
-   ```bash
-   npx expo start
-   ```
+3. ฟังก์ชั่นโพสต์สถานะ
+4. ฟังก์ชั่นคอมเม้นท์สถานะ
+5. ฟังก์ชั่น like and unlike สถานะ
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## รูปตัวอย่างผลงาน
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+![หน้า login](assets/images/work/login.png)
+![หน้า main](assets/images/work/main.png)
+![หน้า feed](assets/images/work/feed.png)
+![หน้า members](assets/images/work/members.png)
+![หน้า profile](assets/images/work/profile.png)
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## ติดตั้ง
 
-```bash
-npm run reset-project
-```
+npx create-expo-app todo-mobile-app
+cd todo-mobile-app
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## package
 
-## Learn more
+npm install @react-navigation/native @react-navigation/native-stack
+npm install react-native-screens react-native-safe-area-context
+npm install axios
+npm install lucide-react-native
 
-To learn more about developing your project with Expo, look at the following resources:
+## รัน
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+โปรเเกรม
+npx expo start -c
